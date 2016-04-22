@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-2">
+	      <!--Sidebar content-->
+		Search:
+		<input  class="itemAction" ng-model="query">
+		Filter:
+		<select class="itemAction" ng-model="orderProp">
+		  <option value="model">model</option>
+		  <option value="year">year</option>
+		</select>
+		<a class="compareCarsButton btn btn-primary itemAction" ng-click="compareCars()">Compare Selected Cars</a>
+	</div>
+	<div class="col-md-10">
+		<ul class="carList">
+			<li ng-repeat="car in carsList | filter:query | orderBy:orderProp" class="car-listing" >
+			    <a href="#/cars/{{car.id}}" class="thumb thumbnail">
+			    	<img ng-src="img/cars/{{car.img}}">
+			    </a>
+			    <h3>{{car.manufacturer}} {{car.model}}</h3>
+			    <dl>
+				  <dt>Price:</dt>
+				  <dd>{{car.price}}</dd>
+				  <dt>Year:</dt>
+				  <dd>{{car.year}}</dd>
+				</dl>
+				<input type="checkbox" ng-model="seletedArray[$index]">
+	            <a class="moreDetails btn btn-primary" href="#/cars/{{car.id}}">More details</a>
+			</li>
+		</ul>
+	</div>
+</div>

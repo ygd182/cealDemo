@@ -1,0 +1,13 @@
+{
+  "name": "angular Tutorial",
+  "description": "Code from the angular tutorial",
+  "keywords": [ "angularjs", "tutorial" ],
+  "repository": "https://github.com/ygd182/angular-phonecat",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/c/ca/AngularJS_logo.svg",
+  "website": "https://github.com/ygd182/angular-phonecat",
+  "success_url": "/",
+  "env" : {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+  }
+}
+

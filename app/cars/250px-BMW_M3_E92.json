@@ -1,0 +1,12 @@
+{
+    "id": "250px-BMW_M3_E92",
+    "img" : "250px-BMW_M3_E92.jpg",
+    "manufacturer" : "BMW",
+    "model" : "M3",
+    "price" : 60500,
+    "year": 2003,
+    "wiki": "http://en.wikipedia.org/wiki/Bmw_m3",
+    "gps": true,
+    "stereo": true,
+    "airbag": false
+}
