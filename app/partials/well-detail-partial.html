@@ -1,0 +1,21 @@
+<div class="wellDetailsPartial">
+    <h2>{{well.manufacturer}} {{well.model}}</h2>
+    <img ng-src="img/wells/{{well.img}}" class="thumbnail">
+    <dl>
+        <dt class="description-item">Manufacturer:</dt>
+        <dd class="description-item">{{well.manufacturer}}</dd>
+        <dt class="description-item">Model:</dt>
+        <dd class="description-item">{{well.model}}</dd>
+        <dt class="description-item">Price:</dt>
+        <dd class="description-item">{{well.price}}</dd>
+        <dt class="description-item">Year:</dt>
+        <dd class="description-item">{{well.year}}</dd>
+        <dt class="description-item">GPS:</dt>
+        <dd class="description-item" ng-class="{check: well.gps, cross:!well.gps}"></dd>
+        <dt class="description-item">Airbag:</dt>
+        <dd class="description-item" ng-class="{check: well.airbag, cross:!well.airbag}"></dd>
+        <dt class="description-item">Radio:</dt>
+        <dd  class="description-item" ng-class="{check: well.stereo, cross:!well.stereo}"></dd>
+    </dl>
+</div>
+

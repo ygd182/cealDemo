@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-2">
+	      <!--Sidebar content-->
+		Search:
+		<input  class="itemAction" ng-model="query">
+		Filter:
+		<select class="itemAction" ng-model="orderProp">
+		  <option value="model">model</option>
+		  <option value="year">year</option>
+		</select>
+	</div>
+	<div class="col-md-10">
+		<ul class="wellList">
+			<li ng-repeat="well in wellsList | filter:query | orderBy:orderProp" class="well-listing" >
+			    <a href="#/wells/{{well.id}}" class="thumb thumbnail">
+			    	<span class="glyphicon glyphicon-ok">
+			    </a>
+			    <h3>{{well.id}}</h3>
+			    <dl>
+				  <dt>Informacion:</dt>
+				  <dd>{{well.info}}</dd>
+				</dl>
+	            <a class="moreDetails btn btn-primary" href="#/wells/{{well.id}}">More details</a>
+			</li>
+		</ul>
+	</div>
+</div>

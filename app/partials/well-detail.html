@@ -1,0 +1,17 @@
+<div class="wellDetails">
+	<h3>{{well.id}}</h3>
+    <dl>
+	  <dt>Informacion:</dt>
+	  <dd>{{well.info}}</dd>
+	</dl>
+	<ul ng-repeat="status in well.logs">
+		<li>
+			<span class="glyphicon glyphicon-ok">
+			<span class="glyphicon glyphicon-remove">
+			<span class="glyphicon glyphicon-warning-sign">
+		    <label class="description-item">Hora de checkeo:</label>
+		    <label class="description-item">{{status.checkTime}}</label>
+	 	</li>
+	</ul>
+</div>
+

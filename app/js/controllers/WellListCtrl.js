@@ -1,8 +1,8 @@
 controllers.controller('WellListCtrl', ['$scope', 'services','$window' ,
   function($scope, services, $window) {
-    function onGetPhonesSuccess(response){
-       $scope.carsList = response.data;
-       for (var i = $scope.carsList.length - 1; i >= 0; i--) {
+    function onGetWellsSuccess(response){
+       $scope.wellsList = response.data;
+       for (var i = $scope.wellsList.length - 1; i >= 0; i--) {
          $scope.seletedArray.push(false);
        };
     }
@@ -23,13 +23,13 @@ controllers.controller('WellListCtrl', ['$scope', 'services','$window' ,
     var init = function(){
       $scope.seletedArray = [];
 
-      services.getCars().then(onGetPhonesSuccess, onGetPhonesFailure);
+      services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
 
       $scope.compareCars = function compareCars (){
         var carIdArray = [];
         for (var i =0; i < $scope.seletedArray.length ; i++) {
            if($scope.seletedArray[i]){
-            carIdArray.push ( $scope.carsList[i].id);
+            carIdArray.push ( $scope.wellsList[i].id);
            }
          }
          if(carIdArray.length > 1 && carIdArray.length < 4){

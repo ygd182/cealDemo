@@ -2,7 +2,7 @@
 
 /* App Module */
 
-var carApp = angular.module('carApp', [
+var wellApp = angular.module('wellApp', [
   'ngRoute',
   //'animations',
 
@@ -12,23 +12,23 @@ var carApp = angular.module('carApp', [
   'services'
 ]);
 
-carApp.config(['$routeProvider',
+wellApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/wells', {
-        templateUrl: 'partials/car-list.html',
+        templateUrl: 'partials/well-list.html',
         controller: 'WellListCtrl'
       }).
       when('/wells/:wellId', {
-        templateUrl: 'partials/car-detail.html',
+        templateUrl: 'partials/well-detail.html',
         controller: 'WellDetailCtrl'
       }).
       when('/wells/:wellId1/:wellId2', {
-        templateUrl: 'partials/car-detail.html',
+        templateUrl: 'partials/well-detail.html',
         controller: 'WellDetailCtrl'
       }).
       when('/wells/:wellId1/:wellId2/:wellId3', {
-        templateUrl: 'partials/car-detail.html',
+        templateUrl: 'partials/well-detail.html',
         controller: 'WellDetailCtrl'
       }).
       otherwise({

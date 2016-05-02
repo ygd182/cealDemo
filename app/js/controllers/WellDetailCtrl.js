@@ -1,15 +1,16 @@
 controllers.controller('WellDetailCtrl', ['$scope', '$routeParams', 'services',
   function($scope, $routeParams, services) {
 
+    function onGetWellDetailSuccess(response){
+      $scope.well = response.data;
+    }
 
+    function onGetWellDetailFailure(data, status, headers, config){
+        console.log('error');
+    }
     function init(){
-      $scope.carIdArray = [];
-      for (var property in $routeParams) {
-          if ($routeParams.hasOwnProperty(property)) {
-
-              $scope.carIdArray.push($routeParams[property])
-          }
-      }
+      var id = $routeParams.wellId;
+      services.getWellById(id).then(onGetWellDetailSuccess, onGetWellDetailFailure);
     }
     init();
 }]);

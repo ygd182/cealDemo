@@ -6,16 +6,17 @@ var services = angular.module('services', []);
 
 services.service('services', ['$http',
   function($http) {
-  	var getCars = function () {
-  		return $http.get('cars/cars.json');
+    var url = 'http://localhost:3100';
+  	var getWells = function () {
+  		return $http.get(url + '/wells');
   	};
 
-  	var getCarById = function(id) {
-  		return $http.get('cars/'+id+'.json');
+  	var getWellById = function(id) {
+  		return $http.get(url + '/wells/'+ id);
   	};
 
   	return {
-  			 getCars: getCars,
-			   getCarById: getCarById
+  			 getWells: getWells,
+			   getWellById: getWellById
 		};
   }]);
