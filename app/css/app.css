@@ -177,3 +177,14 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+#map-outer {  
+  height: 440px; 
+  padding: 20px; 
+  border: 2px solid #CCC; 
+  margin-bottom: 20px; 
+  background-color:#FFF 
+}
+#map-container { 
+  height: 400px;
+}
