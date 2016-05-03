@@ -1,0 +1,22 @@
+{
+"id": "Pozo1",
+"info": "torre tanque",
+"logs": [
+		{
+		"checkTime": "2014-01-01T00:00:00.000Z",
+		"active": "true",
+		"_id": "5716e4fd10470172182fa95c"
+		},
+		{
+		"checkTime": "2016-01-01T00:00:00.000Z",
+		"active": "true",
+		"_id": "5716e58510470172182fa95d"
+		},
+		{
+		"checkTime": "2017-01-01T00:00:00.000Z",
+		"active": "true",
+		"onTime": "true",
+		"_id": "5716e60f2a5f29ff1811bdb3"
+		}
+	]
+}

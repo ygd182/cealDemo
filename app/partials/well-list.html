@@ -1,26 +1,20 @@
-<div class="row">
-    <div class="col-md-2">
-	      <!--Sidebar content-->
-		Search:
-		<input  class="itemAction" ng-model="query">
-		Filter:
-		<select class="itemAction" ng-model="orderProp">
-		  <option value="model">model</option>
-		  <option value="year">year</option>
-		</select>
-	</div>
-	<div class="col-md-10">
-		<ul class="wellList">
-			<li ng-repeat="well in wellsList | filter:query | orderBy:orderProp" class="well-listing" >
-			    <a href="#/wells/{{well.id}}" class="thumb thumbnail">
-			    	<span class="glyphicon glyphicon-ok">
-			    </a>
-			    <h3>{{well.id}}</h3>
+<div>
+	<h1>Lista de Pozos</h1>
+	<div class="input-group">
+		<span class="input-group-btn">
+			<button class="btn btn-success" type="button">Buscar</button>
+		</span>
+		<input type="text" class="form-control" placeholder="Ingrese su busqueda..." ng-model="query">
+	</div><!-- /input-group -->
+	<div>
+		<ul class="wellList list-group">
+			<li ng-repeat="well in wellsList | filter:query | orderBy:orderProp" class="well-listing list-group-item" >
+			    <h3 class="list-group-item-heading">{{well.id}}</h3>
 			    <dl>
 				  <dt>Informacion:</dt>
 				  <dd>{{well.info}}</dd>
 				</dl>
-	            <a class="moreDetails btn btn-primary" href="#/wells/{{well.id}}">More details</a>
+	            <a class="moreDetails btn btn-primary" href="#/wells/{{well.id}}">Mas detalles</a>
 			</li>
 		</ul>
 	</div>

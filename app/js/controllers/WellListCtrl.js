@@ -24,25 +24,6 @@ controllers.controller('WellListCtrl', ['$scope', 'services','$window' ,
       $scope.seletedArray = [];
 
       services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
-
-      $scope.compareCars = function compareCars (){
-        var carIdArray = [];
-        for (var i =0; i < $scope.seletedArray.length ; i++) {
-           if($scope.seletedArray[i]){
-            carIdArray.push ( $scope.wellsList[i].id);
-           }
-         }
-         if(carIdArray.length > 1 && carIdArray.length < 4){
-            var compareURLParams = createUrlParams (carIdArray);
-            $window.location.href = '/app/#/cars' + compareURLParams;
-         }else{
-          if(carIdArray.length < 1){
-            alert('You need to select at least 2 cars to compare');
-          }else{
-            alert('You have selected more than 3 cars to compare');
-          }
-         }
-      };
     }
 
     init();
