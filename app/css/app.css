@@ -179,12 +179,19 @@
 }
 
 #map-outer {  
-  height: 440px; 
   padding: 20px; 
   border: 2px solid #CCC; 
   margin-bottom: 20px; 
   background-color:#FFF 
 }
 #map-container { 
-  height: 400px;
+  height: 300px;
+  width: 50%;
+  display: inline-block;
+}
+
+#address {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
 }
