@@ -15,13 +15,17 @@ var wellApp = angular.module('wellApp', [
 wellApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+    when('/createwell', {
+        templateUrl: 'partials/well-form.html',
+        controller: 'WellCreateCtrl'
+      }).
       when('/wells', {
         templateUrl: 'partials/well-list.html',
         controller: 'WellListCtrl'
       }).
       when('/wells/:wellId', {
         templateUrl: 'partials/well-detail.html',
-        controller: 'WellDetailCtrl'
+        controller: 'WellDetailCtrl'  
       }).
       otherwise({
         redirectTo: '/wells'

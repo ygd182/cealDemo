@@ -178,3 +178,8 @@
   width: 49%;
   vertical-align: top;
 }
+
+.wellForm {
+  border: 5px solid #f7f7f9;
+  padding: 15px;
+}
