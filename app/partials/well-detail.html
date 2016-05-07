@@ -1,30 +1,42 @@
 <div class="wellDetails">
-	<h3>{{well.id}}</h3>
-    <dl>
-	  <dt>Informacion:</dt>
-	  <dd>{{well.info}}</dd>
-	</dl>
-	<div id="map-outer" >
-          <div id="address">
-            <address>
-            <strong>Peggy Guggenheim Collection</strong><br>
-                Dorsoduro, 701-704<br>
-                30123<br>
-                Venezia<br>
-                Italia<br>
-                <abbr>P:</abbr> +39 041 240 5411
-           </address>
-          </div>
+	<div id="map-outer" >	
+        <div id="address">
+        <h3>{{well.id}}</h3>
+        <dl>
+		  <dt>Informacion:</dt>
+		  <dd>{{well.info}}</dd>
+		</dl>
+        <address><h4>Direccion</h4>
+        <strong>{{well.address.street}}</strong><br>
+            {{well.address.number}}<br>
+            <abbr>Tel:</abbr> +39 041 240 5411
+       </address>
+        </div>
         <div id="map-container"></div>
-      </div><!-- /map-outer -->
-	<ul class="list-group" ng-repeat="status in well.logs">
-		<li class="list-group-item">
-			<span class="glyphicon glyphicon-ok">
-			<span class="glyphicon glyphicon-remove">
-			<span class="glyphicon glyphicon-warning-sign">
-		    <label class="description-item">Hora de checkeo:</label>
-		    <label class="description-item">{{status.checkTime}}</label>
-	 	</li>
-	</ul>
+    </div><!-- /map-outer -->
+    <div class="listContainer">
+    	<h3>Estados</h3>
+		<table class="table table-bordered">
+		  <thead>
+		    <tr>
+		      <th>Hora</th>
+		      <th>Activo</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-class="{'active-row': status.active, 'not-active-row': !status.active}" ng-repeat="status in well.logs">
+		      <td>{{status.checkTime}}</td>
+		      <td><span class="glyphicon" ng-class="{'glyphicon-ok': status.active, 'glyphicon-remove': !status.active}"></span></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<ul class="list-group" ng-repeat="status in well.logs">
+			<li class="list-group-item">
+				<span class="glyphicon" ng-class="{'glyphicon-ok': status.active, 'glyphicon-remove': !status.active}"></span>
+			    <label class="description-item">Hora de checkeo:</label>
+			    <label class="description-item">{{status.checkTime}}</label>
+		 	</li>
+		</ul>
+    </div>
 </div>
 

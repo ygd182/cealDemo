@@ -11,27 +11,28 @@ controllers.controller('WellDetailCtrl', ['$scope', '$routeParams', 'services',
     }
 
     function init_map() {
-      var var_location = new google.maps.LatLng(45.430817,12.331516);
-
+      var location = new google.maps.LatLng($scope.well.address.x, $scope.well.address.y);
+      console.log(location);
       var var_mapoptions = {
-      center: var_location,
-      zoom: 14
-      };
+          center: location,
+          zoom: 17
+        };
 
       var var_marker = new google.maps.Marker({
-      position: var_location,
+        position: location,
         map: var_map,
-      title:"Venice"});
+        title:"Direccion"
+      });
 
-      var var_map = new google.maps.Map(document.getElementById("map-container"),
-        var_mapoptions);
+      var var_map = new google.maps.Map(document.getElementById("map-container"), var_mapoptions);
 
       var_marker.setMap(var_map); 
-
     }
+
     function init(){
       var id = $routeParams.wellId;
       services.getWellById(id).then(onGetWellDetailSuccess, onGetWellDetailFailure);
     }
+
     init();
 }]);

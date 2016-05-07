@@ -4,6 +4,7 @@
 .view-container {
   position: relative;
   padding: 10px;
+  font-size: 16px;
 }
 
 .view-frame.ng-enter, .view-frame.ng-leave {
@@ -102,32 +103,14 @@
 }
 
 
-.wellDetailsPartial {
-  margin: 10px;
-  padding: 10px 15px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+.wellDetails .table tr.active-row{
+    background-color: rgba(7, 175, 12, 0.38);
+}
+.wellDetails .table tr.not-active-row{
+    background-color: rgba(134, 0, 12, 0.68);
 }
 
-.wellDetailsPartial .description-item {
-  padding: 10px 15px;
-  border: 1px solid #ddd;
-  margin-bottom: -1px;
-}
 
-.wellDetailsPartial dd.description-item {
-  background-color: #eee;
-}
-
-.cross:before {
-	content: '✘';
-	display: inline-block;
-}
-
-.check:before {
-	content: '✓';
-	display: inline-block;
-}
 
 @keyframes moveIn {
     0%   {left:0px; top:100%}
