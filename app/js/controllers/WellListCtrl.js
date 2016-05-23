@@ -24,6 +24,7 @@ controllers.controller('WellListCtrl', ['$scope', 'services','$window' ,
       $scope.seletedArray = [];
 
       services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
+      
     }
 
     init();

@@ -4,12 +4,22 @@
 	  <fieldset class="form-group">
 	    <label for="idInput">Identificador Pozo</label>
 	    <input type="text" class="form-control" id="idInput" placeholder="Id pozo" ng-model="well.id">
-	    <small class="text-muted">Este camppo se usa para identificar al pozo y no puede tener espacios.</small>
+	    <small class="text-muted">Este campo se usa para identificar al pozo y no puede tener espacios.</small>
 	  </fieldset>
 	  <fieldset class="form-group">
 	    <label for="infoTextarea">Descripcion Pozo</label>
 	    <textarea class="form-control" id="exampleTextarea" rows="3" ng-model="well.info"></textarea>
 	  </fieldset>
+	  <div class="form-address form-inline">
+	  	<fieldset class="form-group">
+		    <label for="streetInput">Calle</label>
+		    <input type="text" class="form-control" id="idInput" placeholder="Calle" ng-model="well.address.street">
+		  </fieldset>
+		  <fieldset class="form-group">
+		    <label for="numberInput">Numero</label>
+		    <input type="text" class="form-control" id="idInput" placeholder="Numero" ng-model="well.address.number">
+		  </fieldset>
+	  </div>
 	  <button type="submit" class="btn btn-primary">Guardar</button>
 	</form>
 </div>

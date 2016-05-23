@@ -37,7 +37,7 @@ controllers.controller('WellCreateCtrl', ['$scope', '$routeParams', 'services',
             "x":-36.776098, 
             "y":-59.868441,
             "street": "",
-            "number": 0
+            "number": ''
           },
         "logs": []
       };

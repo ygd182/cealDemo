@@ -1,14 +1,146 @@
 [
 	{
 		"id": "Pozo1",
-		"info": "torre tanque"
+		"info": "torre tanque",
+		"enabled": true,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": true,
+				"onTime": true
+			}
 	},
 	{
 		"id": "Pozo1",
-		"info": "torre tanque"
+		"info": "torre tanque",
+		"enabled": false,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": false,
+				"onTime": false
+			}
 	},
 	{
 		"id": "Pozo1",
-		"info": "torre tanque"
+		"info": "torre tanque",
+		"enabled": true,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": false,
+				"onTime": true
+			}
+	},
+	{
+		"id": "Pozo1",
+		"info": "torre tanque",
+		"enabled": true,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": false,
+				"cause": "start",
+				"error": false,
+				"onTime": true
+			}
+	},
+	{
+		"id": "Pozo1",
+		"info": "torre tanque",
+		"enabled": false,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": false,
+				"onTime": true
+			}
+	},
+	{
+		"id": "Pozo1",
+		"info": "torre tanque",
+		"enabled": true,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": false,
+				"onTime": false
+			}
+	},
+	{
+		"id": "Pozo1",
+		"info": "torre tanque",
+		"enabled": true,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": false,
+				"onTime": true
+			}
+	},
+	{
+		"id": "Pozo1",
+		"info": "torre tanque",
+		"enabled": false,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": false,
+				"onTime": true
+			}
+	},
+	{
+		"id": "Pozo1",
+		"info": "torre tanque",
+		"enabled": true,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": false,
+				"onTime": true
+			}
+	},
+	{
+		"id": "Pozo1",
+		"info": "torre tanque",
+		"enabled": true,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": true,
+				"onTime": true
+			}
+	},
+	{
+		"id": "Pozo1",
+		"info": "torre tanque",
+		"enabled": false,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": false,
+				"onTime": true
+			}
+	},
+	{
+		"id": "Pozo1",
+		"info": "torre tanque",
+		"enabled": true,
+		"log": {
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": false,
+				"onTime": true
+			}
 	}
 ]

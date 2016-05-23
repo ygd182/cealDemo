@@ -1,12 +1,26 @@
 <div>
-	<h1>Lista de Pozos</h1>
-	<div class="input-group">
-		<span class="input-group-btn">
-			<button class="btn btn-success" type="button">Buscar</button>
-		</span>
-		<input type="text" class="form-control" placeholder="Ingrese su busqueda..." ng-model="query">
-	</div><!-- /input-group -->
+	<div class="title-container"><h1><span class="glyphicon glyphicon-list"></span>Lista de Pozos</h1></div>
 	<div>
+		<ul class="well-list">
+			<li ng-repeat="well in wellsList | filter:query" class="well-list-item" ng-class="{'active': !well.log.error, 'inactive': well.log.error, 'disabled': !well.enabled, 'warning': !well.log.onTime}">
+			    <h2 class="list-group-item-heading">{{well.id}}</h2>
+			    <div class="status-container">
+			    	<span class="status-text" ng-show="well.log.active">ON</span>
+			    	<span class="status-text" ng-hide="well.log.active">OFF</span>
+			    	<p class="status-time-hour">{{well.log.checkTime | date:"HH:mm"}}</p>
+			    	<p class="status-time-day">{{well.log.checkTime | date:"dd/MM/yyyy"}}</p>
+			    </div>
+				<!--<label>Informacion:</label>
+				<p>{{well.info}}</p>-->
+	            <a class="moreDetails btn btn-default" href="#/wells/{{well.id}}">Mas detalles</a>
+			</li>
+		</ul>
+		<div class="input-group">
+			<span class="input-group-btn">
+				<button class="btn btn-success" type="button">Buscar</button>
+			</span>
+			<input type="text" class="form-control" placeholder="Ingrese su busqueda..." ng-model="query">
+		</div><!-- /input-group -->
 		<ul class="wellList list-group">
 			<li ng-repeat="well in wellsList | filter:query | orderBy:orderProp" class="well-listing list-group-item" >
 			    <h3 class="list-group-item-heading">{{well.id}}</h3>

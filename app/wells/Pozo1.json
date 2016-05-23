@@ -9,26 +9,29 @@
 	},
 
 "logs": [
-		{
-		"checkTime": "2014-01-01T00:00:00.000Z",
-		"active": true,
-		"_id": "5716e4fd10470172182fa95c"
-		},
-		{
-		"checkTime": "2014-01-01T00:00:00.000Z",
-		"active": false,
-		"_id": "5716e4fd10470172182fa95c"
-		},
-		{
-		"checkTime": "2016-01-01T00:00:00.000Z",
-		"active": true,
-		"_id": "5716e58510470172182fa95d"
-		},
-		{
-		"checkTime": "2017-01-01T00:00:00.000Z",
-		"active": true,
-		"onTime": "true",
-		"_id": "5716e60f2a5f29ff1811bdb3"
-		}
+			{
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "start",
+				"error": false
+			},
+			{
+				"checkTime": "2014-01-01T00:00:00.000Z",
+				"active": false,
+				"cause": "report",
+				"error": false
+			},
+			{
+				"checkTime": "2016-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "report",
+				"error": false
+			},
+			{
+				"checkTime": "2017-01-01T00:00:00.000Z",
+				"active": true,
+				"cause": "change",
+				"error": false
+			}
 	]
 }

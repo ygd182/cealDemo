@@ -3,7 +3,7 @@
 
 .view-container {
   position: relative;
-  padding: 10px;
+  padding: 0 10px;
   font-size: 16px;
 }
 
@@ -183,3 +183,86 @@
   border: 5px solid #f7f7f9;
   padding: 15px;
 }
+
+.form-address {
+  margin-bottom: 15px;  
+}
+
+/*---------main list------------*/
+.title-container {
+  background-color: #4C7BE0;
+  height: 150px;
+  text-align: center;
+  color: #fff;
+}
+
+.title-container h1 {
+  font-size: 75px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.title-container span {
+  margin-right: 10px;
+}
+
+.well-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.well-list .well-list-item {
+  display: inline-block;
+  margin: 10px;
+  width: 193px;
+  height: 270px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+.well-list .well-list-item h2 {
+  font-weight: bold;
+}
+
+.well-list .well-list-item .status-container {
+  margin-bottom: 10px;
+  background: rgb(38, 38, 38);
+  padding: 10px;
+}
+
+.well-list .well-list-item .status-container .status-text {
+  font-size: 60px;
+}
+
+.well-list .well-list-item .status-container p {
+  margin: 0;
+}
+
+.well-list .well-list-item .status-container .status-time-hour {
+  font-size: 30px;
+}
+
+.well-list .well-list-item .status-container .status-time-day {
+  font-size: 22px;
+}
+
+.well-list .well-list-item.active {
+  background: rgb(81, 161, 42);
+}
+
+.well-list .well-list-item.disabled {
+  background: #696969;
+}
+
+.well-list .well-list-item.inactive {
+  background: rgb(240, 64, 42);
+}
+
+.well-list .well-list-item.warning {
+  background: #FFDE00;
+}
+
