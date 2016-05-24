@@ -2,9 +2,6 @@ controllers.controller('WellListCtrl', ['$scope', 'services','$window' ,
   function($scope, services, $window) {
     function onGetWellsSuccess(response){
        $scope.wellsList = response.data;
-       for (var i = $scope.wellsList.length - 1; i >= 0; i--) {
-         $scope.seletedArray.push(false);
-       };
     }
 
     function onGetPhonesFailure(){

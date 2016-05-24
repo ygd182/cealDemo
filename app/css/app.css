@@ -1,60 +1,17 @@
 /* app css stylesheet */
 
+@media screen and (min-width: 420px) {
+
+}
+
+@media screen and (min-width: 800px) {
+  
+}
 
 .view-container {
   position: relative;
   padding: 0 10px;
   font-size: 16px;
-}
-
-.view-frame.ng-enter, .view-frame.ng-leave {
-  background: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.view-frame.ng-enter {
-  -webkit-animation: 0.5s fade-in;
-  -moz-animation: 0.5s fade-in;
-  -o-animation: 0.5s fade-in;
-  animation: 0.5s fade-in;
-  z-index: 100;
-}
-
-.view-frame.ng-leave {
-  -webkit-animation: 0.5s fade-out;
-  -moz-animation: 0.5s fade-out;
-  -o-animation: 0.5s fade-out;
-  animation: 0.5s fade-out;
-  z-index:99;
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@-moz-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@-webkit-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@-moz-keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@-webkit-keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
 }
 
 
@@ -66,100 +23,7 @@
   padding-left: 0;
 }
 
-.wellList li {
-	list-style: none;
-	display: block;
-	border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.wellList li:nth-child(odd) {
-    background-color: #f5f5f5;
-}
-
-.wellList li dl {
-  display: inline-block;
-}
-
-.wellList li .moreDetails {
-  float: right;
-  width: 104px;
-}
-
-.wellList li .thumb{
-	width: 100px;
-	float: left;
-	margin: 10px;
-}
-
-.wellList li .thumb img {
-	max-width: 100%;
-}
-
-.wellList li input[type=checkbox]{
-  display: block;
-  margin: 10px;
-}
-
-
-.wellDetails .table tr.active-row{
-    background-color: rgba(7, 175, 12, 0.38);
-}
-.wellDetails .table tr.not-active-row{
-    background-color: rgba(134, 0, 12, 0.68);
-}
-
-
-
-@keyframes moveIn {
-    0%   {left:0px; top:100%}
-    50%  {left:0px; top:50%}*/
-    100% {left:0px; top:0px;}
-}
-
-.animateIn {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    animation-name: moveIn;
-    animation-duration: 4s;
-}
-
-
-.well-listing.ng-enter,
-.well-listing.ng-leave,
-.well-listing.ng-move {
-  -webkit-transition: 0.5s linear all;
-  -moz-transition: 0.5s linear all;
-  -o-transition: 0.5s linear all;
-  transition: 0.5s linear all;
-}
-
-.well-listing.ng-enter,
-.well-listing.ng-move {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-.well-listing.ng-move.ng-move-active,
-.well-listing.ng-enter.ng-enter-active {
-  opacity: 1;
-  height: 120px;
-}
-
-.well-listing.ng-leave {
-  opacity: 1;
-  overflow: hidden;
-}
-
-.well-listing.ng-leave.ng-leave-active {
-  opacity: 0;
-  height: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
+/*-----------details----------------------------*/
 
 #map-outer {  
   padding: 20px; 
@@ -236,6 +100,8 @@
 
 .well-list .well-list-item .status-container .status-text {
   font-size: 60px;
+  line-height: 1;
+  display: block;
 }
 
 .well-list .well-list-item .status-container p {
@@ -266,3 +132,34 @@
   background: #FFDE00;
 }
 
+
+
+/*   lista   */
+.wellList li {
+  list-style: none;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.wellList li:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.wellList li dl {
+  display: inline-block;
+}
+
+.wellList li .moreDetails {
+  float: right;
+  width: 104px;
+}
+
+
+.wellDetails .table tr.active-row{
+    background-color: rgba(7, 175, 12, 0.38);
+}
+.wellDetails .table tr.not-active-row{
+    background-color: rgba(134, 0, 12, 0.68);
+}
