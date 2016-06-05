@@ -1,37 +1,48 @@
 {
 "id": "Pozo1",
 "info": "torre tanque",
+"enabled": true,
+"onTime": true,
 "address": {
 		"x":-36.776098, 
 		"y":-59.868441,
 		"street": "Cacique Catriel",
 		"number": "300"
 	},
-
 "logs": [
 			{
 				"checkTime": "2014-01-01T00:00:00.000Z",
 				"active": true,
 				"cause": "start",
-				"error": false
+				"isError": false
 			},
 			{
 				"checkTime": "2014-01-01T00:00:00.000Z",
 				"active": false,
 				"cause": "report",
-				"error": false
+				"isError": false
 			},
 			{
 				"checkTime": "2016-01-01T00:00:00.000Z",
 				"active": true,
 				"cause": "report",
-				"error": false
+				"isError": false
 			},
 			{
 				"checkTime": "2017-01-01T00:00:00.000Z",
 				"active": true,
 				"cause": "change",
-				"error": false
+				"isError": false
 			}
-	]
+	],
+	"rules": [
+                {
+                    "start": "00:00",
+                    "end": "07:59"
+                },
+                {
+                    "start": "16:00",
+                    "end": "23:59"
+                }
+            ]
 }
