@@ -23,6 +23,10 @@ wellApp.config(['$routeProvider',
         templateUrl: 'partials/well-list.html',
         controller: 'WellListCtrl'
       }).
+      when('/#', {
+        templateUrl: 'partials/well-list.html',
+        controller: 'WellListCtrl'
+      }).
       when('/wells/:wellId', {
         templateUrl: 'partials/well-detail.html',
         controller: 'WellDetailCtrl'  
