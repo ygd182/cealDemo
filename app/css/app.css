@@ -117,20 +117,21 @@
 }
 
 .well-list .well-list-item.active {
-  background: rgb(81, 161, 42);
-}
-
-.well-list .well-list-item.disabled {
-  background: #696969;
+  background: rgb(81, 161, 42);/*green*/
 }
 
 .well-list .well-list-item.inactive {
-  background: rgb(240, 64, 42);
+  background: rgb(240, 64, 42);/*red*/
 }
 
 .well-list .well-list-item.warning {
-  background: #FFDE00;
+  background: #FFDE00;/*yellow*/
 }
+
+.well-list .well-list-item.disabled {
+  background: #696969;/*gray*/
+}
+
 
 
 
