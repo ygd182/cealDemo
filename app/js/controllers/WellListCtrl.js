@@ -18,9 +18,14 @@ controllers.controller('WellListCtrl', ['$scope', 'services','$window' ,
 
 
     var init = function(){
+      var mins = 1;
+      var intervalTime = 60 * mins * 1000;
       $scope.seletedArray = [];
-
       services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
+
+      setInterval(function runInterval(){ 
+        services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
+      }, intervalTime);
       
     }
 
