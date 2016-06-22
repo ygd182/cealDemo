@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
-  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
@@ -24,11 +24,24 @@
   <script src="js/controllers/WellDetailCtrl.js"></script>
   <script src="js/controllers/WellCreateCtrl.js"></script>
   <script src="js/directives/WellDetailsDirective.js"></script>
+
+
+   <script src="bower_components/moment/min/moment.min.js"></script>
+   <script src="bower_components/moment/min/locales.min.js"></script>
+   <script src="bower_components/humanize-duration/humanize-duration.js"></script>
+
+   <script src="bower_components/angular-timer/dist/angular-timer.js"></script>
+   
+
+
+   
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-   <a class="navbar-brand" href="#">Control Pozos</a>
-</nav>
+  <nav class="navbar navbar-inverse">
+     <a class="navbar-brand" href="#">Control Pozos</a>
+  </nav>
+
+  <timer countdown="30" interval="1000"><div class="progress progress-striped active {{displayProgressActive}}"style="height: 30px;"> Remaining time : {{countdown}} second{{secondsS}} ({{progressBar}}%). Activity? {{displayProgressActive}} <div class="bar" style="min-width: 2em;width: {{progressBar}}%;"></div> </div></timer>
   <div class="view-container">
     <div ng-view class="view-frame"></div>
   </div>
