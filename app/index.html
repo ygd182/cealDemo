@@ -25,12 +25,9 @@
   <script src="js/controllers/WellCreateCtrl.js"></script>
   <script src="js/directives/WellDetailsDirective.js"></script>
 
-
-   <script src="bower_components/moment/min/moment.min.js"></script>
-   <script src="bower_components/moment/min/locales.min.js"></script>
-   <script src="bower_components/humanize-duration/humanize-duration.js"></script>
-
-   <script src="bower_components/angular-timer/dist/angular-timer.js"></script>
+   <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+   
    
 
 
@@ -41,7 +38,6 @@
      <a class="navbar-brand" href="#">Control Pozos</a>
   </nav>
 
-  <timer countdown="30" interval="1000"><div class="progress progress-striped active {{displayProgressActive}}"style="height: 30px;"> Remaining time : {{countdown}} second{{secondsS}} ({{progressBar}}%). Activity? {{displayProgressActive}} <div class="bar" style="min-width: 2em;width: {{progressBar}}%;"></div> </div></timer>
   <div class="view-container">
     <div ng-view class="view-frame"></div>
   </div>
