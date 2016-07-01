@@ -2,7 +2,7 @@ controllers.controller('WellListCtrl', ['$scope', 'services','$window', '$timeou
   function($scope, services, $window, $timeout) {
     function onGetWellsSuccess(response){
        $scope.wellsList = response.data;
-       $scope.progress = -2;
+       $scope.progress = 0;
        progress();
     }
 
@@ -24,7 +24,7 @@ controllers.controller('WellListCtrl', ['$scope', 'services','$window', '$timeou
             $timeout(function(){
                 $scope.progress += 1;
                 progress();
-            },200);
+            },1000);
         }else {
           $scope.progress = 0;
           services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
