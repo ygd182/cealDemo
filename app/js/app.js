@@ -9,8 +9,7 @@ var wellApp = angular.module('wellApp', [
   'controllers',
   'directives',
   //'phonecatFilters',
-  'services',
-  'ui.bootstrap'
+  'services'
 ]);
 
 wellApp.config(['$routeProvider',

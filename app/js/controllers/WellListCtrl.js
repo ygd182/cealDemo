@@ -1,22 +1,18 @@
 controllers.controller('WellListCtrl', ['$scope', 'services','$window', '$timeout' ,
   function($scope, services, $window, $timeout) {
+    var mins = 1;
+    var intervalTime = 60 * mins * 1000;
+
     function onGetWellsSuccess(response){
        $scope.wellsList = response.data;
-       $scope.progress = 0;
-       progress();
+       reloadWells();
     }
 
     function onGetPhonesFailure(){
        console.log('error');
+       reloadWells();
     }
 
-    function createUrlParams (carIdArray) {
-      var carParams= '';
-      for (var i =0; i < carIdArray.length ; i++) {
-        carParams= carParams +'/'+ carIdArray[i];
-      }
-      return carParams;
-    }
 
     function progress(){
       console.log($scope.progress);
@@ -27,18 +23,18 @@ controllers.controller('WellListCtrl', ['$scope', 'services','$window', '$timeou
             },1000);
         }else {
           $scope.progress = 0;
-          services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
+          services.getWells().then(onGetWellsSuccess, onGetWellsFailure);
         }
+    }
+    function reloadWells(){
+      $timeout(function(){
+          services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
+      },intervalTime);
     }
 
 
     var init = function(){
-      var mins = 1;
-      var intervalTime = 60 * mins * 1000;
-
-      $scope.seletedArray = [];
       services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
-      $scope.progress = 0;
       
     }
 

@@ -12,7 +12,6 @@ controllers.controller('WellDetailCtrl', ['$scope', '$routeParams', 'services',
 
     function init_map() {
       var location = new google.maps.LatLng($scope.well.address.x, $scope.well.address.y);
-      console.log(location);
       var var_mapoptions = {
           center: location,
           zoom: 17

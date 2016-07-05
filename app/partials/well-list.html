@@ -1,10 +1,8 @@
 <div>
-    <progressbar value="progress"></progressbar>
-
 	<div class="title-container"><h1><span class="glyphicon glyphicon-list"></span>Lista de Pozos</h1></div>
 	<div>
 		<ul class="well-list">
-			<li ng-repeat="well in wellsList | filter:query" class="well-list-item" ng-class="{'active': !well.log.error, 'inactive': well.log.isError, 'disabled': !well.enabled, 'warning': !well.onTime}">
+			<li ng-repeat="well in wellsList | filter:query" class="well-list-item" ng-class="{'active': !well.log.error, 'error': well.log.isError, 'disabled': !well.enabled, 'warning': !well.onTime}">
 			    <h2 class="list-group-item-heading">{{well.id}}</h2>
 			    <div class="status-container">
 			    	<span class="status-text" ng-show="well.log.active">ON</span>
