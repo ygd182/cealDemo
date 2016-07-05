@@ -7,7 +7,7 @@ var services = angular.module('services', []);
 services.service('services', ['$http',
   function($http) {
     //var url = 'http://localhost:3100';
-    var url = 'http://wells.herokuapp.com';
+    var url = 'https://wells.herokuapp.com';
   	var getWells = function () {
   		return $http.get(url + '/wells');
       //return $http.get('wells/wells.json');
