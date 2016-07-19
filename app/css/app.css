@@ -166,6 +166,13 @@
   background-color: inherit;
 }
 
+.table > tbody > tr > td.active-time {
+  background: green;
+}
+.table > tbody > tr > td.inactive-time {
+  background: white;
+}
+
 @media screen and (min-width: 420px) {
   .view-container {
     padding: 0;

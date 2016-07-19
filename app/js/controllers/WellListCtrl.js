@@ -26,6 +26,7 @@ controllers.controller('WellListCtrl', ['$scope', 'services','$window', '$timeou
           services.getWells().then(onGetWellsSuccess, onGetWellsFailure);
         }
     }
+    
     function reloadWells(){
       $timeout(function(){
           services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
@@ -33,9 +34,28 @@ controllers.controller('WellListCtrl', ['$scope', 'services','$window', '$timeou
     }
 
 
+    function stringTimeToInt(stringTime) {
+        return parseInt(stringTime.replace(/:/g, ''));
+    }
+
+    function existsRuleByCheckTime(rules, currentCheckTime) {
+        var index = -1;
+        index = rules.findIndex(function findByTime(rule) {
+            console.log((stringTimeToInt(rule.start) <= currentCheckTime && stringTimeToInt(rule.end) >= currentCheckTime));
+            return (stringTimeToInt(rule.start) <= currentCheckTime && stringTimeToInt(rule.end) >= currentCheckTime);
+        });
+        return (-1!==index);
+    }
+
     var init = function(){
       services.getWells().then(onGetWellsSuccess, onGetPhonesFailure);
-      
+
+      $scope.isActive = function isActive(hour, well) {
+        hour = parseInt(hour + '00');
+        console.log(hour);
+
+        return existsRuleByCheckTime(well.rules, hour);
+      };
     }
 
     init();
