@@ -74,6 +74,7 @@
   color: #fff;
   padding: 20px 0;
   font-weight: bold;
+  vertical-align: top;
 }
 
 .well-list .well-list-item h2 {
