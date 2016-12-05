@@ -19,19 +19,23 @@ wellApp.config(['$routeProvider',
         templateUrl: 'partials/well-form.html',
         controller: 'WellCreateCtrl'
       }).
-      when('/wells', {
+    when('/login', {
+        templateUrl: 'partials/login.html',
+        controller: 'LoginCtrl'
+      }).
+    when('/wells', {
         templateUrl: 'partials/well-list.html',
         controller: 'WellListCtrl'
       }).
-      when('/#', {
+    when('/#', {
         templateUrl: 'partials/well-list.html',
         controller: 'WellListCtrl'
       }).
-      when('/wells/:wellId', {
+    when('/wells/:wellId', {
         templateUrl: 'partials/well-detail.html',
         controller: 'WellDetailCtrl'  
       }).
-      otherwise({
+    otherwise({
         redirectTo: '/wells'
       });
   }]);
