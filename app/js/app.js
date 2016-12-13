@@ -4,11 +4,10 @@
 
 var wellApp = angular.module('wellApp', [
   'ngRoute',
-  //'animations',
-
+  'ngStorage',
   'controllers',
   'directives',
-  //'phonecatFilters',
+  'interceptors',
   'services'
 ]);
 

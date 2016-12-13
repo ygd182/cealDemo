@@ -20,7 +20,7 @@ services.service('services', ['$http',
 
     var login = function login(data) {
         return $http.post(apiUrl + '/users/login', data);
-    }
+    };
 
   	return {
   			 getWells: getWells,

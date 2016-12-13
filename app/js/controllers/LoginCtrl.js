@@ -1,8 +1,9 @@
-controllers.controller('LoginCtrl', ['$scope', '$routeParams', 'services',
-  function($scope, $routeParams, services) {
+controllers.controller('LoginCtrl', ['$scope', '$routeParams', 'services', '$localStorage',
+  function($scope, $routeParams, services,$localStorage) {
 
   	function onLoginSuccess(data) {
-  		console.log(data);
+  		$localStorage.token = data.data.token;
+  		//delete $localStorage.token; to logout
   	}
 
   	function onLoginFailure(err) {
@@ -13,7 +14,6 @@ controllers.controller('LoginCtrl', ['$scope', '$routeParams', 'services',
     	$scope.formData = {username:'', password:''};
 
 		$scope.doSubmit = function doSubmit() {
-			console.log('submit');
 			services.login($scope.formData).then(onLoginSuccess, onLoginFailure);
 		};
     }
