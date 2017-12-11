@@ -1,6 +1,6 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-# AngularJS GapCarsDemo Application
+# AngularJS CEAL Application
 
 ## Overview
 
